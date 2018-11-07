@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Setting and Privacy</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.4.1/css/all.css" integrity="sha384-5sAR7xN1Nv6T6+dT2mhtzEpVJvfS3NScPQTrOxhwjIuvcA67KV2R5Jz6kr4abQsz" crossorigin="anonymous">
+    <link rel="shortcut icon" type="image/x-icon" href="http://www.icons101.com/icons/74/Plex_by_Cornmanthe3rd/128/twitter.png" />
+    <link rel="stylesheet" type="text/css" media="screen" href="setting.css" />
+    <script src="js/main.js"></script>
+  </head>
+
+  <body>
+    <header>
+      <div id="container-navigation">
+        <div id="left-navigation">
+            
+            <p><a href="index.html">Home</a></p>
+            <p><a href="#">Notifications</a></p>
+            <p><a href="#">Messages</a></p>
+        </div>
+        <div id="logo-navigation">
+          <img src="https://png2.kisspng.com/sh/7493dc6513bc6ceddce4d0c5a85c8163/L0KzQYm3U8E6N5hofZH0aYP2gLBuTgNwa5pmhJ92ZXTscX7wjwN1caV6jNc2ZnB1Pb7okvlvbV5mhtY2YX73ccPqlPlkNaR5Rdh7ZXWweLruiL1yfZJxgeZELYT6ecX7hgIucZR0hp8AYXKzQrW9UvNjapJnS5C8N0S5RIKBVcE2OmI5Uac8OUS7Q4W8TwBvbz==/kisspng-social-media-institute-for-marine-and-antarctic-st-free-high-quality-twitter-icon-5ab02d62cbbab3.3746418515214953948345.png">
+        </div>
+        <div id="right-navigation">
+          <input type="text" placeholder="Search..">
+          <div class="tooltip" id="theTooltip">
+
+          </div>
+          
+          <a href="signUp.html"><button type="submit">Tweet</button></a>
+        </div>
+      </div>
+    </header>
+
+    <section id="main">
+
+      <div id="profile">
+
+        <div id="upper-profile"> 
+        </div>
+
+        <div id="lower-profile">
+
+        
+   
+    
+        </div>
+
+      </div>
+
+      <div id="setting">
+        <h4 onclick="showAccount()">Account</h4>
+        <h4 onclick="showPassword()">Password</h4>
+      </div>
+
+      <div class="form-setting">
+        <div id="account">
+          <h2>Account</h2>
+          <hr>
+          <div id="form-account">
+            <!-- ISI FORM DARI JAVASCRIPT -->
+          </div>
+          
+
+        </div>
+
+        <div id="password">
+          <h2>Password</h2>
+          <hr>
+          <div id="form-password">
+            <form onsubmit="event.preventDefault(); editPassword()" method="PUT">
+              <div class="display-form">
+                <label for="current-password">Current Password</label>
+                <input type="password" id="current-password" name="current-password" required />
+              </div>
+              <div class="display-form">
+                <label for="new-password">New Password</label>
+                <input type="password" id="new-password" name="new-password" required />
+              </div>
+              <div class="display-form">
+                <label for="retype-password">Re-type Password</label>
+                <input type="password" id="retype-password" name="retype-password"  required/>
+              </div>
+              
+              <div class="display-form">
+                <label></label>
+                <button id="submitkeun" type="submit">Save Changes</button>
+              </div>
+            
+            </form>
+          </div>
+        </div>
+      
+      </div>
+    
+    </body>
+
+    <script>
+      showAccountData()
+      showStatus()
+    </script>
+
+</html>

@@ -1,0 +1,200 @@
+
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Twitter</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.4.1/css/all.css" integrity="sha384-5sAR7xN1Nv6T6+dT2mhtzEpVJvfS3NScPQTrOxhwjIuvcA67KV2R5Jz6kr4abQsz" crossorigin="anonymous">
+    <link rel="shortcut icon" type="image/x-icon" href="http://www.icons101.com/icons/74/Plex_by_Cornmanthe3rd/128/twitter.png" />
+    <link rel="stylesheet" type="text/css" media="screen" href="main.css" />
+    <script src="js/main.js"></script>
+  </head>
+
+  <body>
+    <header>
+      <div id="container-navigation">
+        <div id="left-navigation">
+            
+            <p><a href="index.html">Home</a></p>
+            <p><a href="#">Notifications</a></p>
+            <p><a href="#">Messages</a></p>
+        </div>
+        <div id="logo-navigation">
+          <img src="https://png2.kisspng.com/sh/7493dc6513bc6ceddce4d0c5a85c8163/L0KzQYm3U8E6N5hofZH0aYP2gLBuTgNwa5pmhJ92ZXTscX7wjwN1caV6jNc2ZnB1Pb7okvlvbV5mhtY2YX73ccPqlPlkNaR5Rdh7ZXWweLruiL1yfZJxgeZELYT6ecX7hgIucZR0hp8AYXKzQrW9UvNjapJnS5C8N0S5RIKBVcE2OmI5Uac8OUS7Q4W8TwBvbz==/kisspng-social-media-institute-for-marine-and-antarctic-st-free-high-quality-twitter-icon-5ab02d62cbbab3.3746418515214953948345.png">
+        </div>
+        <div id="right-navigation">
+          <input type="text" placeholder="Search..">
+          <div class="tooltip" id="theTooltip">
+       
+
+          </div>
+          
+          <a href="signUp.html"><button type="submit">Tweet</button></a>
+        </div>
+      </div>
+    </header>
+    
+    <section id="main">
+
+      <div id="profile">
+
+        <div id="upper-profile"> 
+        </div>
+
+        <div id="lower-profile">
+
+          <!-- INI BUAT SHOW STATUS JAVASCIPT -->
+    
+        </div>
+
+      </div>
+
+      <div id="trending">
+        <span id="trend">Singapore trends</span>
+        <span id="trend-change">. change</span>
+        <ul id="trend-list">
+          
+        </ul>
+      </div>
+
+      <div id="tweet">
+
+        <div id="post-tweet">
+          <img id="fotoBoxTweet" src="">
+          <input id="tweetBox" type="text" placeholder="What's Happening?" onkeyup="disableButton()" >
+          <button id="submit" onclick="addTweet()" disabled>Tweet</button>
+        </div>
+        
+        <div id="newTweet">
+          See 5 new Tweets
+        </div>
+
+        <div id="postedTweet">
+          <div class="containerTweet">
+            <div class="avaFeed">
+              <img src="https://pbs.twimg.com/profile_images/877980023025803270/xntVDuTq_bigger.jpg">
+            </div>
+            <div class="akunFeed">
+              <span class="akunBold">PC Gamer </span><span class="akunTipis">@pcgamer . 28m</span>
+            </div>
+            <div class="dropFeed">
+              <span>drop</span>
+            </div>
+            <div class="contentFeed">
+              <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+            </div>
+            <div class="mediaFeed">
+              <img src="https://m.media-amazon.com/images/M/MV5BZGU1ZTk2N2MtMjM4Ny00ZWFlLWIzZGMtYjIwZjMzZTczYzljXkEyXkFqcGdeQXVyNDMxNzc0NTk@._V1_.jpg">
+            </div>
+            <div class="buttonFeed">
+              <span class="buttonFeeds">Replay 15</span>
+              <span class="buttonFeeds">Retweet 15</span>
+              <span class="buttonFeeds">Like 15</span>
+              <span class="buttonFeeds">Direct Message</span>
+            </div>
+          </div>
+          
+          <div class="containerTweet">
+            <div class="avaFeed">
+              <img src="https://pbs.twimg.com/profile_images/590678158946521088/vYvQazhr_bigger.jpg">
+            </div>
+            <div class="akunFeed">
+              <span class="akunBold">Yu-Gi-Oh!TCG </span><span class="akunTipis">@YuGiOhTCG . 1h</span>
+            </div>
+            <div class="dropFeed">
+              <span>drop</span>
+            </div>
+            <div class="contentFeed">
+              <p>The pharaoh has returned!</p>
+            </div>
+            <div class="mediaFeed">
+              <iframe src="https://www.youtube.com/embed/P3yHRw3saW4" frameborder="0"></iframe>
+            </div>
+            <div class="buttonFeed">
+              <span class="buttonFeeds">Replay 15</span>
+              <span class="buttonFeeds">Retweet 15</span>
+              <span class="buttonFeeds">Like 15</span>
+              <span class="buttonFeeds">Direct Message</span>
+            </div>
+          </div>
+          
+          <div class="containerTweet">
+            <div class="avaFeed">
+              <img src="https://pbs.twimg.com/profile_images/1021074782211706880/_tWuDtdg_bigger.jpg">
+            </div>
+            <div class="akunFeed">
+              <span class="akunBold">100 daysofCode </span><span class="akunTipis">@_100daysofcode . 2h</span>
+            </div>
+            <div class="dropFeed">
+              <span>drop</span>
+            </div>
+            <div class="contentFeed">
+              <p>Mari belajar css Grid. Dimulai dari mempelajari apa itu column dan kegunaan column.</p>
+            </div>
+            <div class="mediaFeed">
+              <img src="https://www.w3schools.com/css/grid_columns.png">
+            </div>
+            <div class="buttonFeed">
+              <span class="buttonFeeds">Replay 15</span>
+              <span class="buttonFeeds">Retweet 15</span>
+              <span class="buttonFeeds">Like 15</span>
+              <span class="buttonFeeds">Direct Message</span>
+            </div>
+          </div>
+          
+        </div>
+
+        
+      </div>
+
+      <div id="suggestion">
+        <span id="suggest-follow">Who to Follow</span>
+        <span id="suggest-all">. Refresh . View all</span>
+        <div id="suggestion-account">
+        <!-- INI BUAT WHO TO FOLLOW JAVASCIPT -->
+        </div>
+        <hr class="hrstyle" style="width:280px;margin-left:-10px">
+        <p>Find people you know</p>
+      </div>
+
+      <footer id="copyright">
+        <ul id="copyright-list">
+          <li>&copy;2018 Twitter</li>
+          <li><a href="#">About</li>
+          <li><a href="#">Help Center</a></li>
+          <li><a href="#">Terms</a></li>
+          <li><a href="#">Privacy policy</a></li>
+          <li><a href="#">Cookies</a></li>
+          <li><a href="#">Ads info</a></li>
+          <li><a href="#">Brand</a></li>
+          <li><a href="#">Blog</a></li>
+          <li><a href="#">Status</a></li>
+          <li><a href="#">Apps</a></li>
+          <li><a href="#">Jobs</a></li>
+          <li><a href="#">Marketing</a></li>
+          <li><a href="#">Businesses</a></li>
+          <li><a href="#">Developers</a></li>
+        </ul>
+      </footer>
+    </section>
+  </body>
+
+<script>
+  if(getCookie('token') == ''){
+    alert('Log in first')
+    window.location = "/signIn.html";
+  } 
+  if (document.getElementById('submit').disabled == true){
+    document.getElementById('submit').style.cursor = 'no-drop';
+  }
+  
+  
+  allTweet()
+  suggestFollow()
+  showStatus()
+  showTrending()
+</script>
+
+</html>

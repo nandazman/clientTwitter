@@ -1,0 +1,541 @@
+* {
+    margin:0;
+  }
+  body {
+    background-color:#e6ecf0;
+  }
+  a {
+    text-decoration:none;
+  }
+  header {
+    position:fixed;
+    top:0;
+    z-index:1;
+    width:100%;
+    background-color:white; 
+    border-bottom: 1px solid rgba(0, 0, 0, 0.664);
+  }
+  
+  #container-navigation {
+    max-width:1190px;
+    margin:0 auto;
+    display:flex;  
+    justify-content:space-between;
+    height: 50px;
+  }
+  
+  
+  #left-navigation {
+    list-style-type:none;
+    padding:0px;
+    display:flex;
+    align-items:center; 
+  }
+  #left-navigation p {
+    width:85px;
+    text-align: center;
+    padding:15px 0px;
+  }
+  #left-navigation a{
+    padding:15px 0px;
+  
+  }
+  
+  #left-navigation p:hover {
+    border-bottom: 3px solid black;
+    margin-top:3px;
+  }
+  
+  #left-navigation a::after{
+    content: "";
+    border-bottom:1px solid black;
+    background-color: yellow;
+  }
+  
+  #logo-navigation {
+    display:flex;
+    align-items:center;
+    margin-left:160px;
+  }
+  
+  #logo-navigation img{
+    width:30px; 
+    
+  }
+  
+  #right-navigation{
+    display:flex;
+    align-items:center;
+    
+  }
+  
+  #right-navigation img{
+    border-radius:50%;
+    width:30px;
+    height:30px;
+    background-color:black;
+    margin-left:15px;
+  }
+  
+  #right-navigation img:hover{
+    cursor: pointer;
+  }
+  
+  
+  .tooltip {
+    position: relative;
+    top:3px;
+  }
+  
+  .tooltip .tooltiptext {
+    visibility: hidden;
+    width: 205px;
+    background-color: white;
+    color: #000;
+    text-align: left;
+    position: absolute;
+    z-index: 1;
+    top: 120%;
+    left: -126px;
+    margin-left: 0px;
+    list-style-type: none;
+    box-shadow: 1px 1px 5px black;
+  }
+  
+  .tooltip .tooltiptext::after {
+    content: "";
+    position: absolute;
+    bottom: 100%;
+    right: 21%;
+    margin-left: -5px;
+    border-width: 5px;
+    border-style: solid;
+    border-color: transparent transparent rgb(190, 190, 190) transparent;
+  }
+  
+  .tooltiptext h4, .tooltiptext h3, .tooltiptext h5 {
+    padding:5px 10px;
+  }
+  .tooltiptext h5:hover {
+    background-color:blue;
+  }
+  .tooltiptext hr {
+    color:rgba(128, 128, 128, 0.24);
+    margin:10px 0px;
+  }
+  
+  /* .tooltip:hover .tooltiptext {
+    visibility: visible;
+  } */
+  #right-navigation input, #right-navigation button {
+    border-radius:25px;
+    width:70px;
+    margin-left:10px;
+    padding:8px 5px;
+    border: 1px solid #e6ecf083;
+  }
+  
+  
+  
+  #right-navigation input {
+    width: 200px;
+    background-color:#e6ecf083;
+  }
+  #right-navigation button {
+    background-color:rgb(0, 0, 136);
+    color:white;
+    font-weight: bold;
+  }
+  
+  #banner {
+    height:50vh;
+    background-image: url("https://goodmenproject.com/wp-content/uploads/2017/06/yu-gi-oh-dark-side-of-dimensions-poster.jpg");
+    background-size: cover;
+    background-position: center;
+  }
+  
+  #main {
+    max-width:1190px;
+    margin:0 auto;
+    display: grid;
+    grid-template-columns: 280px 600px 280px;
+    grid-template-rows: 0px repeat(2,95px) auto 80px auto auto auto 30px;
+    grid-column-gap: 15px;
+    grid-row-gap: 15px;
+    grid-template-areas:
+      ". . ."
+      "profile twitter suggestion"
+      "profile twitter suggestion"
+      ". twitter suggestion"
+      ". twitter trending"
+      ". twitter trending"
+      ". twitter trending"
+      ". twitter copyright"
+      ". twitter .";
+    
+    justify-content: space-between;
+  }
+  #topheader {
+    background-color:white;
+  }
+  #header-stat {
+      background-color:white;
+      max-width: 1190px;
+      width: 100%;
+      margin: 0 auto;
+      height:60px;
+      display: flex;
+      justify-content: space-around
+  }
+
+  #header-stat img {
+    width: 200px;
+    height: 200px;
+    margin: 0px 40px;
+    border-radius:50%;
+    border:2px solid white;
+    margin-top:-100px;
+    background-color: white;
+  }
+
+  #header-stat p {
+    width: 280px;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    color:blue;
+    font-weight: bold;
+  }
+
+  #header-stat div {
+    width:600px;
+  }
+
+  #status-bar {
+    display: flex;
+    align-items: center;
+    text-align: center;
+    list-style-type: none;
+    height: 60px;
+    padding: 0px;
+    
+  }
+  #status-bar li {
+    padding-right:10px;
+  }
+
+  #profile {
+    background-color:rgba(255, 255, 255, 0);
+    grid-area:profile;
+    margin-top:30px;
+  }
+
+  #profile h4 {
+    padding:5px 0px;
+  }
+  
+  #upper-profile{
+    background-color:lightblue;  
+    background-image: url("https://goodmenproject.com/wp-content/uploads/2017/06/yu-gi-oh-dark-side-of-dimensions-poster.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+  }
+  
+  #upper-profile, #lower-profile {
+    height:95px;
+  }
+  
+  #lower-profile {
+    display:grid;
+    grid-template-columns:0px 70px auto;
+    grid-column-gap: 10px;
+  
+    grid-template-areas: 
+    ". foto nama"
+    ". tweets tweets";
+  }
+  
+  #foto-profil{grid-area:foto}
+  #nama-profil{grid-area:nama;}
+  #tweets-status{grid-area:tweets}
+  
+  #foto-profil img{
+    border-radius:50%;
+    width:70px;
+    height:70px;
+    border:2px solid white;
+    margin-top:-32px;
+  }
+  
+  #nama-profil h3 {
+    padding-top:10px;
+  }
+  #nama-profil h4 {
+    font-weight: 100;
+    color: rgba(0, 0, 0, 0.4);
+  }
+  
+  #tweets-status {
+    display: flex;
+    text-align: center;
+    padding-top: 10px;
+  }
+  #tweets-status .tweets-status {
+    padding-right: 45px;
+  }
+  
+  #tweets-status .tweets-status h4 {
+    color:rgba(0, 0, 0, 0.596);
+    font-size: 12px;
+  }
+  #tweets-status .tweets-status p {
+    font-weight:bold;
+    font-size: 20px;
+    color:rgb(1, 1, 167);
+  }
+  
+  
+  
+  #tweet {
+    grid-area:twitter;
+    background-color:white;  
+    text-align:center;
+  }
+  
+  #post-tweet{
+    background-color:rgb(229, 229, 242);
+    padding-bottom:10px;
+  }
+  
+  #post-tweet::after {
+    content: "";
+    clear: both;
+    display: table;
+  }
+  
+  #post-tweet img {
+    width:30px;
+    height:30px;
+    border-radius:50%;
+    margin-top:10px;
+    margin-left:25px;
+    margin-right:10px;
+    float:left;
+  }
+  
+  #post-tweet #tweetBox {
+    width:80%; 
+    margin-top:7px;
+    padding:10px;
+    border-radius:10px;
+    float:left;
+  }
+  
+  #post-tweet #submit {
+    float:right;
+    padding:10px 20px;
+    margin-top: 5px;
+    margin-right:30px;
+    border-radius:20px;
+    background-color:purple;
+    color:white;
+    font-weight: bold;
+  }
+  
+  #newTweet {
+    background-color:#f4fbff;
+    color:blue;
+    padding:10px 0px;
+    border-bottom:1px solid #00000020;
+  }
+  
+  #newTweet:hover {
+    cursor: pointer;
+  }
+  
+  #trending {
+    grid-area:trending;
+    background-color:white;  
+    padding:10px;
+  }
+  #trending #trend {
+    font-weight: bold;
+    font-size: 20px;
+  }
+  #trending #trend-change {
+    color:rgb(0, 0, 255);
+  }
+  #trending #trend-list {
+    padding-left:10px;
+    list-style-type: none;
+    color:blue;
+    font-weight: bold;
+    font-size:14px;
+  }
+  #trending #trend-list li{
+    padding:5px 0px;
+  }
+  #trending #trend-list li p{
+    color:rgb(140, 140, 255);
+    font-weight: 100;
+  }
+  
+  
+  #suggestion {
+    grid-area:suggestion;
+    background-color:white;  
+    padding:10px;
+  }
+  #suggestion #suggest-follow {
+    font-weight: bold;
+    font-size: 20px;
+  }
+  #suggestion #suggest-all {
+    color:rgb(0, 0, 255);
+    font-size: 14px;
+  }
+  .suggest-akun {
+    display:flex;
+    padding:10px 0px 5px 0px;
+    
+  }
+  
+  .ava img{
+    width:50px;
+    height: 50px;
+    border-radius: 50%;
+  }
+  
+  .idfollow {
+    padding-left: 10px;
+    white-space:nowrap;
+    overflow: hidden;
+  }
+  .userother {
+    font-weight: bold;
+  }
+  .idother {
+    color:rgba(0, 0, 0, 0.37);
+  }
+  .follow-button{
+    padding:5px 20px;
+    border-radius:20px;
+    background-color:white;
+    border: 1px solid blue;
+    color:blue;
+    margin-top:5px;
+  }
+  
+  .follow-button:hover{
+    background-color: blue;
+    color: white;
+    cursor: pointer;
+  }
+  .hrstyle {
+    color: rgba(0, 0, 0, 0.116);
+  }
+  #suggestion p {
+    color:blue;
+    padding-top: 26px;
+    font-size:13px;
+  }
+  
+  #copyright {
+    grid-area:copyright;
+    background-color:white;  
+  }
+  
+  #copyright-list {
+    list-style-type: none;
+    display:flex;
+    flex-wrap: wrap;
+    padding-left:0px;
+    padding:10px;
+  }
+  
+  #copyright-list li {
+    padding-right:5px;
+    color:rgb(187, 187, 255);
+    font-size:13px
+  }
+  
+  .containerTweet {
+    text-align:left;
+    display:grid;
+    padding:10px 0px;
+    grid-template-columns:70px 1fr 30px;
+    grid-template-rows:20px auto auto;
+    grid-template-areas: 
+    "avaFeed akunFeed dropFeed"
+    "avaFeed contentFeed contentFeed"
+    ". mediaFeed mediaFeed"
+    ". buttonFeed buttonFeed";
+    border-bottom:1px solid #00000020;
+  }
+  
+  .avaFeed{grid-area:avaFeed}
+  .akunFeed{grid-area:akunFeed}
+  .dropFeed{grid-area:dropFeed}
+  .contentFeed{grid-area:contentFeed}
+  .mediaFeed{grid-area:mediaFeed}
+  .buttonFeed{grid-area:buttonFeed}
+  
+  .avaFeed img{
+    border-radius:50%;
+    width:50px;
+    height:50px;
+  }
+  .avaFeed{
+    text-align:center;
+  }
+  
+  .akunFeed .akunBold {
+    font-weight:bold;
+  }
+  .akunFeed .akunTipis {
+    color:#00000080;
+  }
+  .dropFeed:hover {
+    cursor: pointer;
+    opacity: 0.7;
+  }
+  /* .dropFeed .deleteX {
+    color:
+  } */
+  .contentFeed {
+    padding-right:20px;
+  }
+  .contentFeed p {
+    padding-top:10px;
+  }
+  .mediaFeed {
+    padding:20px 0px; 
+  }
+  .mediaFeed img, .mediaFeed iframe {
+    width:97%;
+    min-height:400px;
+    border-radius:20px;
+  }
+  .buttonFeeds {
+    padding-right:15px;
+    color:#000000ab;
+  }
+  .buttonFeeds:hover, .mediaFeed img:hover {
+    cursor: pointer;
+  }
+  
+  @media screen and (max-width:920px) {
+    #main {
+      grid-template-columns: 280px 600px;
+      grid-template-rows: 45px 200px auto 320px 80px auto 30px;
+      grid-template-areas:
+        ". ."
+        "profile twitter "
+        "trending twitter"
+        "suggestion twitter"
+        "copyright twitter"
+        ". twitter"
+        ". .";
+    }
+  }

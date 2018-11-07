@@ -1,0 +1,115 @@
+
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Twitter</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="shortcut icon" type="image/x-icon" href="http://www.icons101.com/icons/74/Plex_by_Cornmanthe3rd/128/twitter.png" />
+    <link rel="stylesheet" type="text/css" media="screen" href="profile.css" />
+    <script src="js/main.js"></script>
+  </head>
+
+  <body>
+    <header>
+      <div id="container-navigation">
+        <div id="left-navigation">
+            
+            <p><a href="index.html">Home</a></p>
+            <p><a href="#">Notifications</a></p>
+            <p><a href="#">Messages</a></p>
+        </div>
+        <div id="logo-navigation">
+          <img src="https://png2.kisspng.com/sh/7493dc6513bc6ceddce4d0c5a85c8163/L0KzQYm3U8E6N5hofZH0aYP2gLBuTgNwa5pmhJ92ZXTscX7wjwN1caV6jNc2ZnB1Pb7okvlvbV5mhtY2YX73ccPqlPlkNaR5Rdh7ZXWweLruiL1yfZJxgeZELYT6ecX7hgIucZR0hp8AYXKzQrW9UvNjapJnS5C8N0S5RIKBVcE2OmI5Uac8OUS7Q4W8TwBvbz==/kisspng-social-media-institute-for-marine-and-antarctic-st-free-high-quality-twitter-icon-5ab02d62cbbab3.3746418515214953948345.png">
+        </div>
+        <div id="right-navigation">
+          <input type="text" placeholder="Search..">
+          <div class="tooltip" id="theTooltip">
+
+          </div>
+          
+          <a href="signUp.html"><button type="submit">Tweet</button></a>
+        </div>
+      </div>
+    </header>
+
+    <section id="banner">
+    </section>
+    <section id="topheader">
+      <div id="header-stat">
+        
+        
+      </div>
+    </section>
+    
+    <section id="main">
+
+      <div id="profile">
+        
+      </div>
+
+      <div id="trending">
+        <span id="trend">Singapore trends</span>
+        <span id="trend-change">. change</span>
+        <ul id="trend-list">
+          
+        </ul>
+      </div>
+
+      <div id="tweet">
+        
+        <div id="postedTweet">
+
+        </div>
+
+        
+      </div>
+
+      <div id="suggestion">
+        <span id="suggest-follow">Who to Follow</span>
+        <span id="suggest-all">. Refresh . View all</span>
+        <div id="suggestion-account">
+          <!-- JAVASCRIPT SUGGEST AKUN -->
+        </div>
+        
+        <hr class="hrstyle" style="width:280px;margin-left:-10px">
+        <p>Find people you know</p>
+      </div>
+
+      <footer id="copyright">
+        <ul id="copyright-list">
+          <li>&copy;2018 Twitter</li>
+          <li><a href="#">About</li>
+          <li><a href="#">Help Center</a></li>
+          <li><a href="#">Terms</a></li>
+          <li><a href="#">Privacy policy</a></li>
+          <li><a href="#">Cookies</a></li>
+          <li><a href="#">Ads info</a></li>
+          <li><a href="#">Brand</a></li>
+          <li><a href="#">Blog</a></li>
+          <li><a href="#">Status</a></li>
+          <li><a href="#">Apps</a></li>
+          <li><a href="#">Jobs</a></li>
+          <li><a href="#">Marketing</a></li>
+          <li><a href="#">Businesses</a></li>
+          <li><a href="#">Developers</a></li>
+        </ul>
+      </footer>
+    </section>
+    <p id="fotoBoxTweet" style="display: none"></p>
+  </body>
+
+  <script>
+    if(getCookie('token') == ''){
+    alert('Log in first')
+    window.location = "/signIn.html";
+  } 
+  // console.log(window.location.href.split("=")[1])
+    allTweetUser(window.location.href.split("=")[1])
+    suggestFollow()
+    showStatusProfile()
+    showTrending()
+  </script>
+
+</html>

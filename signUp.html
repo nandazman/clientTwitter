@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Twitter signUp</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="shortcut icon" type="image/x-icon" href="http://www.icons101.com/icons/74/Plex_by_Cornmanthe3rd/128/twitter.png" />
+    <link rel="stylesheet" type="text/css" media="screen" href="signup.css" />
+    <script src="js/main.js"></script>
+  </head>
+
+  <body>
+    <section>
+
+      <div id="left">
+        <div>
+          <h1>Follow your interests.</h1>
+          <h1>Hear what people are talking about.</h1>
+          <h1>Join the conversation</h1>
+        </div>
+      </div>
+
+      <div id="right">
+          <div>
+            <header>
+                <img src="https://png2.kisspng.com/sh/7493dc6513bc6ceddce4d0c5a85c8163/L0KzQYm3U8E6N5hofZH0aYP2gLBuTgNwa5pmhJ92ZXTscX7wjwN1caV6jNc2ZnB1Pb7okvlvbV5mhtY2YX73ccPqlPlkNaR5Rdh7ZXWweLruiL1yfZJxgeZELYT6ecX7hgIucZR0hp8AYXKzQrW9UvNjapJnS5C8N0S5RIKBVcE2OmI5Uac8OUS7Q4W8TwBvbz==/kisspng-social-media-institute-for-marine-and-antarctic-st-free-high-quality-twitter-icon-5ab02d62cbbab3.3746418515214953948345.png">
+                <a href="signIn.html"><button>Log in</button></a>
+            </header>
+            <h1>See what’s happening in the world right now</h1>
+            <h2>Join twitter today.</h2>
+            
+            <form onsubmit="event.preventDefault(); signUp()" method="POST">
+                <label for="fullname">Full Name</label>
+                <input type="text" id="fullname" name="fullname" placeholder="Full Name" required />
+                <br>
+                <label for="username">User Name</label>
+                <input type="text" id="username" name="username" placeholder="User Name" required />
+                <br>
+                <label for="email">Email</label>
+                <input type="email" id="email" name="email" placeholder="Email" required/>
+                <br>
+                <label for="password">Password</label>
+                <input type="password" id="password" name="password" placeholder="Password" required/>
+                <br>
+                <button id="submitkeun" type="submit">Sign Up</button>
+            </form>
+        </div>
+      </div>
+
+    </section>
+    <footer id="copyright">
+      <ul id="copyright-list">
+        <li>&copy;2018 Twitter</li>
+        <li><a href="#">About</li>
+        <li><a href="#">Help Center</a></li>
+        <li><a href="#">Terms</a></li>
+        <li><a href="#">Privacy policy</a></li>
+        <li><a href="#">Cookies</a></li>
+        <li><a href="#">Ads info</a></li>
+        <li><a href="#">Brand</a></li>
+        <li><a href="#">Blog</a></li>
+        <li><a href="#">Status</a></li>
+        <li><a href="#">Apps</a></li>
+        <li><a href="#">Jobs</a></li>
+        <li><a href="#">Marketing</a></li>
+        <li><a href="#">Businesses</a></li>
+        <li><a href="#">Developers</a></li>
+      </ul>
+    </footer>
+
+  </body>
+
+</html>
