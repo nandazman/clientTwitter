@@ -293,7 +293,7 @@ function deleteTweet(id){
 
     xhr.onreadystatechange = function() {
         
-        if(JSON.parse(this.response).message == 'You have to logged in'){
+        if(this.readyState == 4 && JSON.parse(this.response).message == 'You have to logged in'){
             alert(this.response.message)
             window.location = "/signIn.html";
         } else {
@@ -323,9 +323,13 @@ function showAccountData() {
     xhr.send();
 
     xhr.onreadystatechange = function() {
+        if(this.readyState == 4 && JSON.parse(this.response).sukses == false){
+            alert(JSON.parse(this.response).message)
+            window.location = "/signIn.html";
+        }
         if(this.readyState == 4 && this.status < 400){
             // console.log(this.response)
-            var User = JSON.parse(this.response)
+            var User = JSON.parse(this.response).data
             for (key in User) {
                 if (User[key] == null){
                     User[key] = ''
@@ -382,14 +386,14 @@ function editData(){
     xhr.send(JSON.stringify(profile));
 
     xhr.onreadystatechange = function() {
-        if(this.response == 'You have to logged in'){
+        if(this.readyState == 4 && JSON.parse(this.response).sukses == false){
             alert(this.response)
             window.location = "/signIn.html";
         } else {
             if (this.readyState == 4 && this.status < 400){
-                alert("Data has been edited " + this.status)
+                alert(JSON.parse(this.response).message + this.status)
             } else if (this.readyState == 4){
-                alert("something wrong" + this.status)  
+                alert(JSON.parse(this.response).message + this.status)  
             }
         }
     }
@@ -412,14 +416,15 @@ function editPassword() {
     document.getElementById('new-password').value = ''
     document.getElementById('retype-password').value = ''
     xhr.onreadystatechange = function() {
-        if(this.response == 'You have to logged in'){
-            alert(this.response)
+        if(this.readyState == 4 && JSON.parse(this.response).message == 'You have to logged in'){
+            alert('aaa')
+            alert(JSON.parse(this.response).message)
             window.location = "/signIn.html";
         } else {
             if (this.readyState == 4 && this.response < 400){
-                alert("Data has been edited " + this.status)
+                alert(JSON.parse(this.response).message + this.status)
             } else if (this.readyState == 4){
-                alert(this.response + " " + this.status)  
+                alert(JSON.parse(this.response).message + " " + this.status)  
             }
         }
     }
@@ -440,12 +445,12 @@ function suggestFollow(){
     xhr.onreadystatechange = function() {
         // console.log(this.response)
         // console.log(this.readyState, this.response)
-        if(this.response == 'You have to logged in'){
-            alert(this.response)
+        if(this.readyState == 4 && JSON.parse(this.response).message == 'You have to logged in'){
+            alert(JSON.parse(this.response).message)
             window.location = "/signIn.html";
         } else {
             if (this.readyState == 4 && this.status < 400){
-                userSuggestion = JSON.parse(this.response)
+                userSuggestion = JSON.parse(this.response).data
                 userSuggestion.forEach(data => {
                     document.getElementById('suggestion-account').insertAdjacentHTML('afterbegin',`<div class="suggest-akun" >
                     <div class="ava">
@@ -478,9 +483,9 @@ function followButton(id){
     xhr.send(JSON.stringify(follow))
 
     xhr.onreadystatechange = function () {
-        if(this.response == 'You have to logged in'){
-            alert(this.response)
-            window.location = "/signIn.html";
+        if(this.readyState == 4 && JSON.parse(this.response).sukses == false){
+            alert(JSON.parse(this.response).message)
+            
         } else {
             if (this.readyState == 4 && this.status < 400){
                 id = "user" + id
@@ -506,13 +511,14 @@ function showStatus(){
     xhr.send()
 
     xhr.onreadystatechange = function(){
-        if(this.response == 'You have to logged in'){
-            alert(this.response)
-            window.location = "/signIn.html";
+        // alert(this.response)
+        if(this.readyState == 4 && JSON.parse(this.response).sukses == false){
+            alert(JSON.parse(this.response))
+            // window.location = "/signIn.html";
         } else {
             if(this.readyState == 4 && this.status < 400){
-                statusId = JSON.parse(this.response);
-                // console.log(statusId.id)
+                statusId = JSON.parse(this.response).data;
+                console.log(statusId.id)
                 document.getElementById('lower-profile').insertAdjacentHTML('afterbegin', `<div id="foto-profil">
                 <img src="${statusId.photoprofile}">
             </div>
@@ -558,7 +564,12 @@ function showTrending(){
     xhr.send()
 
     xhr.onreadystatechange = function(){
-        if(this.status < 400){trending = JSON.parse(this.response)}
+        if(this.readyState == 4 && JSON.parse(this.response).sukses == false){
+            // alert(JSON.parse(this.response).message)
+            // window.location = "/signIn.html";
+        } else if(this.status < 400){
+            trending = JSON.parse(this.response).data
+        }
         
         trendK = Object.keys(trending)
         document.getElementById("trend-list").insertAdjacentHTML('afterbegin',`<li>${trendK[0]}
@@ -609,12 +620,12 @@ function showStatusProfile(){
     xhr.send()
 
     xhr.onreadystatechange = function(){
-        if(this.response == 'You have to logged in'){
-            alert(this.response)
+        if(this.readyState == 4 && JSON.parse(this.response).sukses == false){
+            alert(JSON.parse(this.response).message)
             window.location = "/signIn.html";
         } else {
             if(this.readyState == 4 && this.status < 400){
-                statusId = JSON.parse(this.response);
+                statusId = JSON.parse(this.response).data;
                 console.log(statusId.photoprofile)
                 
                 document.getElementById("header-stat").insertAdjacentHTML('afterbegin', `<img src="${statusId.photoprofile}" alt="aaa">
